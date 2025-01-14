@@ -1,164 +1,104 @@
 const questions = [
-    {
-        question: "What is the plural of 'cat'?",
-        options: ["catz", "cates", "cat's", "cats"],
-        answer: "cats"
-    },
-    {
-        question: "Which word means 'the opposite of big'?",
-        options: ["tall", "large", "huge", "small"],
-        answer: "small"
-    },
-    {
-        question: "What is the capital of the United States?",
-        options: ["New York", "Los Angeles", "Chicago", "Washington, D.C."],
-        answer: "Washington, D.C."
-    },
-    {
-        question: "Which word is a color?",
-        options: ["apple", "table", "run", "blue"],
-        answer: "blue"
-    },
-    {
-        question: "What is the past tense of 'go'?",
-        options: ["goed", "go", "going", "went"],
-        answer: "went"
-    },
-    {
-        question: "Which sentence is correct?",
-        options: [
-            "She go to school.",
-            "She going to school.",
-            "She gone to school.",
-            "She goes to school."
-        ],
-        answer: "She goes to school."
-    },
-    {
-        question: "What is the opposite of 'hot'?",
-        options: ["warm", "boiling", "sunny", "cold"],
-        answer: "cold"
-    },
-    {
-        question: "What is the correct form of the verb in this sentence? 'I ___ a book.'",
-        options: ["is reading", "readed", "reading", "read"],
-        answer: "read"
-    },
-    {
-        question: "Which word is a verb?",
-        options: ["happy", "quickly", "table", "run"],
-        answer: "run"
-    },
-    {
-        question: "What is the correct question form? '___ you like ice cream?'",
-        options: ["Does", "Do", "Is", "Do"],
-        answer: "Do"
-    },
-    {
-        question: "Which of these is a fruit?",
-        options: ["Carrot", "Lettuce", "Potato", "Banana"],
-        answer: "Banana"
-    },
-    {
-        question: "What is the correct way to say 'I am ____'?",
-        options: ["tireds", "tire", "tireing", "tired"],
-        answer: "tired"
-    },
-    {
-        question: "Which word means 'not heavy'?",
-        options: ["strong", "thick", "large", "light"],
-        answer: "light"
-    },
-    {
-        question: "What is the opposite of 'happy'?",
-        options: ["joy", "funny", "nice", "sad"],
-        answer: "sad"
-    },
-    {
-        question: "Which sentence is correct?",
-        options: [
-            "He don't like coffee.",
-            "He doesn't likes coffee.",
-            "He not like coffee.",
-            "He doesn't like coffee."
-        ],
-        answer: "He doesn't like coffee."
-    },
-    {
-        question: "What is the correct word? 'I have two ____.'",
-        options: ["cat", "catses", "cat's", "cats"],
-        answer: "cats"
-    },
-    {
-        question: "Which word is an adjective?",
-        options: ["quickly", "sing", "house", "beautiful"],
-        answer: "beautiful"
-    },
-    {
-        question: "Which of these is a body part?",
-        options: ["chair", "table", "floor", "arm"],
-        answer: "arm"
-    },
-    {
-        question: "What is the correct form? 'They ___ going to the park.'",
-        options: ["is", "am", "be", "are"],
-        answer: "are"
-    },
-    {
-        question: "Choose the correct form: 'I ___ happy.'",
-        options: ["am not", "is", "are", "am"],
-        answer: "am"
-    },
-    {
-        question: "Which sentence is correct?",
-        options: [
-            "She are my friend.",
-            "She am my friend.",
-            "She be my friend.",
-            "She is my friend."
-        ],
-        answer: "She is my friend."
-    },
-    {
-        question: "What is the correct question form? '___ they at home?'",
-        options: ["Is", "Am", "Are", "Are"],
-        answer: "Are"
-    },
-    {
-        question: "Identify the correct sentence:",
-        options: [
-            "He am a doctor.",
-            "He is a doctor.",
-            "He are a doctor.",
-            "He is a doctor."
-        ],
-        answer: "He is a doctor."
-    },
-    {
-        question: "Which sentence is correct?",
-        options: [
-            "She have a dog.",
-            "She haves a dog.",
-            "She having a dog.",
-            "She has a dog."
-        ],
-        answer: "She has a dog."
-    },
-    {
-        question: "What is the correct form? 'There ___ a lot of people at the party.'",
-        options: ["is", "was", "am", "are"],
-        answer: "are"
-    },
-    {
-        question: "What is the correct sentence?",
-        options: [
-            "I have 10 years old.",
-            "She has 15 years old.",
-            "She are 15 years old.",
-            "I am 15 years old."
-        ],
-        answer: "I am 15 years old."
-    }
+  {
+    "question": "Which of the following sentences correctly uses negative inversion?",
+    "options": [
+      "I have never seen such a beautiful sunset.",
+      "Never have I seen such a beautiful sunset.",
+      "Such a beautiful sunset have I never seen.",
+      "Never have I seen such a beautiful sunset."
+    ],
+    "answer": "Never have I seen such a beautiful sunset."
+  },
+  {
+    "question": "Identify the correct negative inversion in this context:",
+    "options": [
+      "She didn’t only win the race, but she also set a new record.",
+      "Only she won the race, not the record.",
+      "She won not only the race, but a new record.",
+      "Not only did she win the race, but she also set a new record."
+    ],
+    "answer": "Not only did she win the race, but she also set a new record."
+  },
+  {
+    "question": "Choose the sentence that demonstrates proper negative inversion:",
+    "options": [
+      "I seldom have heard such a wonderful performance.",
+      "Such a wonderful performance I have seldom heard.",
+      "Seldom I have heard such a wonderful performance.",
+      "Seldom have I heard such a wonderful performance."
+    ],
+    "answer": "Seldom have I heard such a wonderful performance."
+  },
+  {
+    "question": "Which sentence uses negative inversion correctly?",
+    "options": [
+      "He hardly did speak a word during the meeting.",
+      "He didn’t hardly speak a word during the meeting.",
+      "Hardly he did speak a word during the meeting.",
+      "Hardly did he speak a word during the meeting."
+    ],
+    "answer": "Hardly did he speak a word during the meeting."
+  },
+  {
+    "question": "Select the correct negative inversion:",
+    "options": [
+      "She had no sooner arrived than the party started.",
+      "She arrived no sooner than the party started.",
+      "No sooner she arrived than the party started.",
+      "No sooner had she arrived than the party started."
+    ],
+    "answer": "No sooner had she arrived than the party started."
+  },
+  {
+    "question": "Identify the sentence that correctly applies negative inversion:",
+    "options": [
+      "He visits rarely his grandparents.",
+      "He does rarely visit his grandparents.",
+      "Rarely he visits his grandparents.",
+      "Rarely does he visit his grandparents."
+    ],
+    "answer": "Rarely does he visit his grandparents."
+  },
+  {
+    "question": "Which option correctly uses negative inversion?",
+    "options": [
+      "I little did know about the surprise party.",
+      "Did I know little about the surprise party.",
+      "I didn’t know little about the surprise party.",
+      "Little did I know about the surprise party."
+    ],
+    "answer": "Little did I know about the surprise party."
+  },
+  {
+    "question": "Choose the correct sentence with negative inversion:",
+    "options": [
+      "I have not once missed a class.",
+      "Not once I have missed a class.",
+      "Not I once have missed a class.",
+      "Not once have I missed a class."
+    ],
+    "answer": "Not once have I missed a class."
+  },
+  {
+    "question": "Select the sentence that correctly uses negative inversion:",
+    "options": [
+      "They had scarcely begun when it started to rain.",
+      "They began scarcely when it started to rain.",
+      "Had they scarcely begun when it started to rain.",
+      "Scarcely had they begun when it started to rain."
+    ],
+    "answer": "Scarcely had they begun when it started to rain."
+  },
+  {
+    "question": "Which of the following sentences correctly employs negative inversion?",
+    "options": [
+      "I have never before felt so excited.",
+      "Never before I have felt so excited.",
+      "I have felt never so excited before.",
+      "Never have I felt so excited before."
+    ],
+    "answer": "Never have I felt so excited before."
+  }
 ];
 
 
