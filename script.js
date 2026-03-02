@@ -1,584 +1,220 @@
 const questions = [
-    {
-        question: "¿Qué método elimina el último elemento de un array y lo devuelve?",
-        options: ["pop()", "shift()", "push()", "unshift()"],
-        answer: "pop()"
-    },
-    {
-        question: "¿Qué método se utiliza para añadir elementos al final de un array y devolver la nueva longitud del array?",
-        options: ["shift()", "unshift()", "push()", "pop()"],
-        answer: "push()"
-    },
-    {
-        question: "¿Qué método elimina el primer elemento de un array y lo retorna?",
-        options: ["pop()", "shift()", "push()", "unshift()"],
-        answer: "shift()"
-    },
-    {
-        question: "¿Qué método añade elementos al inicio de un array y devuelve la nueva longitud del array?",
-        options: ["push()", "pop()", "unshift()", "shift()"],
-        answer: "unshift()"
-    },
-    {
-        question: "¿Qué método une dos o más arrays y devuelve un nuevo array?",
-        options: ["push()", "pop()", "concat()", "shift()"],
-        answer: "concat()"
-    },
-    {
-        question: "¿Qué método ejecuta una función en cada elemento del array?",
-        options: ["forEach()", "map()", "filter()", "reduce()"],
-        answer: "forEach()"
-    },
-    {
-        question: "¿Qué método crea un nuevo array con los resultados de la función aplicada a cada elemento?",
-        options: ["forEach()", "map()", "filter()", "reduce()"],
-        answer: "map()"
-    },
-    {
-        question: "¿Qué método crea un nuevo array con los elementos que cumplen la condición dada?",
-        options: ["forEach()", "map()", "filter()", "reduce()"],
-        answer: "filter()"
-    },
-    {
-        question: "¿Qué método aplica una función a un acumulador y a cada valor del array para reducirlo a un único valor?",
-        options: ["forEach()", "map()", "filter()", "reduce()"],
-        answer: "reduce()"
-    },
-    {
-        question: "¿Qué método devuelve el primer elemento que cumple la función de prueba proporcionada?",
-        options: ["findIndex()", "includes()", "indexOf()", "find()"],
-        answer: "find()"
-    },
-    {
-        question: "¿Qué método devuelve el índice del primer elemento que cumple la función de prueba proporcionada?",
-        options: ["find()", "includes()", "findIndex()", "indexOf()"],
-        answer: "findIndex()"
-    },
-    {
-        question: "¿Qué método determina si un array incluye un elemento específico?",
-        options: ["find()", "includes()", "findIndex()", "indexOf()"],
-        answer: "includes()"
-    },
-    {
-        question: "¿Qué método devuelve el primer índice de un elemento en el array?",
-        options: ["find()", "includes()", "findIndex()", "indexOf()"],
-        answer: "indexOf()"
-    },
-    {
-        question: "¿Qué método une todos los elementos de un array en una cadena?",
-        options: ["slice()", "splice()", "join()", "sort()"],
-        answer: "join()"
-    },
-    {
-        question: "¿Qué método devuelve una copia de una parte del array?",
-        options: ["slice()", "splice()", "join()", "sort()"],
-        answer: "slice()"
-    },
-    {
-        question: "¿Qué método cambia el contenido del array eliminando y/o agregando elementos?",
-        options: ["slice()", "splice()", "join()", "sort()"],
-        answer: "splice()"
-    },
-    {
-        question: "¿Qué método ordena los elementos del array?",
-        options: ["slice()", "splice()", "join()", "sort()"],
-        answer: "sort()"
-    },
-    {
-        question: "¿Qué método revierte el orden de los elementos en un array?",
-        options: ["slice()", "sort()", "reverse()", "splice()"],
-        answer: "reverse()"
-    },
-    {
-        question: "¿Qué método devuelve una cadena que representa los elementos del array separados por comas?",
-        options: ["join()", "toString()", "concat()", "map()"],
-        answer: "toString()"
-    },
-    {
-        question: "¿Qué método devuelve la longitud de una cadena?",
-        options: ["includes()", "charAt()", "slice()", "length"],
-        answer: "length"
-    },
-    {
-        question: "¿Qué método devuelve el carácter en el índice especificado de una cadena?",
-        options: ["includes()", "indexOf()", "slice()", "charAt()"],
-        answer: "charAt()"
-    },
-    {
-        question: "¿Qué método determina si una cadena contiene otra cadena?",
-        options: ["includes()", "indexOf()", "slice()", "charAt()"],
-        answer: "includes()"
-    },
-    {
-        question: "¿Qué método devuelve el índice de la primera ocurrencia de un valor en una cadena?",
-        options: ["includes()", "indexOf()", "slice()", "charAt()"],
-        answer: "indexOf()"
-    },
-    {
-        question: "¿Qué método extrae una sección de una cadena y devuelve una nueva cadena?",
-        options: ["slice()", "split()", "substring()", "replace()"],
-        answer: "slice()"
-    },
-    {
-        question: "¿Qué método divide una cadena en un array de subcadenas?",
-        options: ["slice()", "split()", "substring()", "replace()"],
-        answer: "split()"
-    },
-    {
-        question: "¿Qué método devuelve una parte de la cadena entre los índices start y end?",
-        options: ["slice()", "split()", "substring()", "replace()"],
-        answer: "substring()"
-    },
-    {
-        question: "¿Qué método convierte toda la cadena a minúsculas?",
-        options: ["toLowerCase()", "toUpperCase()", "trim()", "replace()"],
-        answer: "toLowerCase()"
-    },
-    {
-        question: "¿Qué método convierte toda la cadena a mayúsculas?",
-        options: ["toLowerCase()", "toUpperCase()", "trim()", "replace()"],
-        answer: "toUpperCase()"
-    },
-    {
-        question: "¿Qué método elimina los espacios en blanco de ambos extremos de la cadena?",
-        options: ["toLowerCase()", "toUpperCase()", "trim()", "replace()"],
-        answer: "trim()"
-    },
-    {
-        question: "¿Qué método reemplaza una parte de la cadena por otra cadena?",
-        options: ["toLowerCase()", "toUpperCase()", "trim()", "replace()"],
-        answer: "replace()"
-    },
-    {
-        question: "¿Qué método reemplaza todas las coincidencias de un patrón en una cadena con una nueva subcadena?",
-        options: ["toLowerCase()", "substring()", "replaceAll()", "replace()"],
-        answer: "replaceAll()"
-    },
-    {
-        question: "¿Qué método devuelve el índice del último elemento que cumple la función de prueba proporcionada?",
-        options: ["find()", "findLastIndex()", "findIndex()", "indexOf()"],
-        answer: "findLastIndex()"
-    },
-    {
-        question: "¿Qué método devuelve el último elemento que cumple la función de prueba proporcionada?",
-        options: ["find()", "findLast()", "findIndex()", "indexOf()"],
-        answer: "findLast()"
-    },
-    {
-        question: "¿Qué método devuelve el valor de un array convertido en una cadena local?",
-        options: ["toString()", "toLocaleString()", "join()", "concat()"],
-        answer: "toLocaleString()"
-    },
-    {
-        question: "¿Qué método ejecuta una función reductora sobre cada elemento de un array, de derecha a izquierda, para reducirlo a un único valor?",
-        options: ["reduce()", "map()", "filter()", "reduceRight()"],
-        answer: "reduceRight()"
-    },
-    {
-        question: "¿Qué método copia una secuencia de elementos de un array dentro del mismo array?",
-        options: ["slice()", "splice()", "concat()", "copyWithin()"],
-        answer: "copyWithin()"
-    },
-    {
-        question: "¿Qué método devuelve un nuevo array con los elementos que cumplen la condición dada y luego aplica una función a cada elemento?",
-        options: ["forEach()", "filter().map()", "map().filter()", "reduce().map()"],
-        answer: "filter().map()"
-    },
-    {
-        question: "¿Qué método crea un nuevo array con todos los sub-arrays concatenados?",
-        options: ["flat()", "map()", "filter()", "reduce()"],
-        answer: "flat()"
-    },
-    {
-        question: "¿Qué método crea un nuevo array con todos los sub-arrays concatenados hasta la profundidad especificada?",
-        options: ["flat()", "flatMap()", "concat()", "map()"],
-        answer: "flatMap()"
-    },
-    {
-        question: "¿Qué método devuelve una cadena creada por la concatenación de todos los elementos en un array separados por una cadena separadora?",
-        options: ["join()", "toString()", "concat()", "split()"],
-        answer: "join()"
-    },
-    {
-        question: "¿Qué tipo de dato se utiliza para almacenar valores verdaderos o falsos?",
-        options: ["String", "Number", "Boolean", "Object"],
-        answer: "Boolean"
-    },
-    {
-        question: "¿Qué tipo de dato puede almacenar una secuencia de caracteres?",
-        options: ["String", "Number", "Boolean", "Array"],
-        answer: "String"
-    },
-    {
-        question: "¿Qué tipo de dato puede almacenar una lista ordenada de elementos?",
-        options: ["String", "Number", "Boolean", "Array"],
-        answer: "Array"
-    },
-    {
-        question: "¿Qué tipo de dato se utiliza para almacenar datos numéricos?",
-        options: ["String", "Number", "Boolean", "Object"],
-        answer: "Number"
-    },
-    {
-        question: "¿Qué tipo de dato se utiliza para representar una referencia a una función?",
-        options: ["Object", "Function", "String", "Array"],
-        answer: "Function"
-    },
-    {
-        question: "¿Qué valor especial se utiliza para indicar una referencia a un objeto no existente?",
-        options: ["undefined", "null", "NaN", "false"],
-        answer: "null"
-    },
-    {
-        question: "¿Cuál es el resultado de sumar una cadena y un número en JavaScript?",
-        options: ["Error", "Una cadena que representa la concatenación del número y la cadena", "Un número que representa la suma", "NaN"],
-        answer: "Una cadena que representa la concatenación del número y la cadena"
-    },
-    {
-        question: "¿Qué tipo de dato es un valor booleano en JavaScript?",
-        options: ["String", "Number", "Boolean", "Object"],
-        answer: "Boolean"
-    },
-    {
-        question: "¿Qué tipo de dato es una colección de caracteres?",
-        options: ["String", "Number", "Boolean", "Array"],
-        answer: "String"
-    },
-    {
-        question: "¿Qué tipo de dato es una colección de propiedades y métodos?",
-        options: ["Array", "Boolean", "String", "Object"],
-        answer: "Object"
-    },
-    {
-        question: "¿Qué tipo de dato representa un valor numérico no válido?",
-        options: ["undefined", "null", "NaN", "0"],
-        answer: "NaN"
-    },
-    {
-        question: "¿Qué tipo de dato es un contenedor para múltiples elementos?",
-        options: ["Array", "Boolean", "Number", "String"],
-        answer: "Array"
-    },
-    {
-        question: "¿Cuál de los siguientes no es un valor primitivo en JavaScript?",
-        options: ["String", "Array", "Boolean", "Number"],
-        answer: "Array"
-    },
-    {
-        question: "¿Qué operador lógico se utiliza para verificar la igualdad de valores y tipos en JavaScript?",
-        options: ["=", "==", "===", "!=="],
-        answer: "==="
-    },
-    {
-        question: "¿Qué operador lógico se utiliza para verificar la desigualdad de valores y tipos en JavaScript?",
-        options: ["!=", "==", "!==", "!=="],
-        answer: "!=="
-    },
-    {
-        question: "¿Qué operador lógico devuelve true si ambos operandos son true?",
-        options: ["||", "!", "&&", "=="],
-        answer: "&&"
-    },
-    {
-        question: "¿Qué operador lógico devuelve true si al menos uno de los operandos es true?",
-        options: ["&&", "!", "||", "=="],
-        answer: "||"
-    },
-    {
-        question: "¿Qué operador lógico invierte el valor de un booleano?",
-        options: ["&&", "||", "!", "=="],
-        answer: "!"
-    },
-    {
-        question: "¿Qué operador lógico se utiliza para la asignación de valores?",
-        options: ["=", "==", "===", "!="],
-        answer: "="
-    },
-    {
-        question: "¿Qué operador lógico devuelve false si ambos operandos son true?",
-        options: ["&&", "!", "XOR", "||"],
-        answer: "XOR"
-    },
-    {
-        question: "¿Qué operador lógico devuelve true si ambos operandos son false?",
-        options: ["||", "!", "XNOR", "&&"],
-        answer: "XNOR"
-    },
-    {
-        question: "¿Qué operador lógico se utiliza para realizar la comparación entre dos expresiones?",
-        options: ["=", "==", "!=", "==="],
-        answer: "=="
-    },
-    {
-        question: "¿Qué operador lógico devuelve true si los operandos no son iguales en valor?",
-        options: ["=", "==", "!=", "==="],
-        answer: "!="
-    },
-    {
-        question: "¿Qué método devuelve el índice del último elemento en el array que cumpla la función de prueba proporcionada?",
-        options: ["findLast()", "findLastIndex()", "findIndex()", "indexOf()"],
-        answer: "findLastIndex()"
-    },
-    {
-        question: "¿Qué método devuelve el último elemento en el array que cumpla la función de prueba proporcionada?",
-        options: ["find()", "findLast()", "findIndex()", "indexOf()"],
-        answer: "findLast()"
-    },
-    {
-        question: "¿Qué método crea un nuevo array con los resultados de llamar a una función en cada elemento del array?",
-        options: ["map()", "forEach()", "filter()", "reduce()"],
-        answer: "map()"
-    },
-    {
-        question: "¿Qué método ejecuta una función en cada elemento del array y devuelve true si la función retorna true para todos los elementos?",
-        options: ["some()", "every()", "map()", "filter()"],
-        answer: "every()"
-    },
-    {
-        question: "¿Qué método ejecuta una función en cada elemento del array y devuelve true si la función retorna true para al menos un elemento?",
-        options: ["some()", "every()", "map()", "filter()"],
-        answer: "some()"
-    },
-    {
-        question: "¿Qué método devuelve un array de los elementos que cumplen con una función de prueba proporcionada?",
-        options: ["filter()", "map()", "reduce()", "forEach()"],
-        answer: "filter()"
-    },
-    {
-        question: "¿Qué método devuelve un nuevo array con los elementos del array original invertidos?",
-        options: ["reverse()", "sort()", "concat()", "splice()"],
-        answer: "reverse()"
-    },
-    {
-        question: "¿Qué método cambia la posición de los elementos de un array en su lugar?",
-        options: ["sort()", "splice()", "concat()", "map()"],
-        answer: "sort()"
-    },
-    {
-        question: "¿Qué método crea una nueva instancia de un array con todos los elementos de este array para los cuales la función de filtrado devuelva true?",
-        options: ["filter()", "map()", "reduce()", "forEach()"],
-        answer: "filter()"
-    },
-    {
-        question: "¿Qué método devuelve una copia superficial de una porción del array en un nuevo array?",
-        options: ["slice()", "splice()", "concat()", "map()"],
-        answer: "slice()"
-    },
-    {
-        question: "¿Qué método se usa para unir todos los elementos de un array en una cadena y devolver esta cadena?",
-        options: ["join()", "toString()", "concat()", "map()"],
-        answer: "join()"
-    },
-    {
-        question: "¿Qué método devuelve un string con una representación de este array y sus elementos?",
-        options: ["toString()", "join()", "concat()", "map()"],
-        answer: "toString()"
-    },
-    {
-        question: "¿Qué método devuelve un nuevo array con los resultados de llamar a una función provista en cada elemento del array que cumpla con la condición dada?",
-        options: ["filter()", "map()", "reduce()", "forEach()"],
-        answer: "filter().map()"
-    },
-    {
-        question: "¿Qué método ejecuta una función reductora sobre cada elemento del array, de derecha a izquierda, para reducirlo a un único valor?",
-        options: ["reduceRight()", "reduce()", "map()", "filter()"],
-        answer: "reduceRight()"
-    },
-    {
-        question: "¿Qué método devuelve el índice de la primera ocurrencia de un valor en una cadena de texto?",
-        options: ["indexOf()", "includes()", "charAt()", "substring()"],
-        answer: "indexOf()"
-    },
-    {
-        question: "¿Qué método devuelve el carácter de una cadena en el índice especificado?",
-        options: ["charAt()", "indexOf()", "slice()", "substring()"],
-        answer: "charAt()"
-    },
-    {
-        question: "¿Qué método crea una nueva cadena copiando caracteres de una parte de una cadena de texto?",
-        options: ["slice()", "substring()", "split()", "replace()"],
-        answer: "slice()"
-    },
-    {
-        question: "¿Qué método elimina espacios en blanco de ambos extremos de una cadena?",
-        options: ["trim()", "replace()", "slice()", "split()"],
-        answer: "trim()"
-    },
-    {
-        question: "¿Qué método busca una cadena en otra cadena y devuelve la primera posición de la coincidencia?",
-        options: ["indexOf()", "includes()", "charAt()", "substring()"],
-        answer: "indexOf()"
-    },
-    {
-        question: "¿Qué método se usa para dividir un objeto tipo cadena en un array de subcadenas?",
-        options: ["split()", "slice()", "substring()", "replace()"],
-        answer: "split()"
-    },
-    {
-        question: "¿Qué método convierte todos los caracteres de una cadena en minúsculas?",
-        options: ["toLowerCase()", "toUpperCase()", "trim()", "slice()"],
-        answer: "toLowerCase()"
-    },
-    {
-        question: "¿Qué método convierte todos los caracteres de una cadena en mayúsculas?",
-        options: ["toUpperCase()", "toLowerCase()", "trim()", "slice()"],
-        answer: "toUpperCase()"
-    },
-    {
-        question: "¿Qué método reemplaza todas las ocurrencias de un valor en una cadena por otro valor?",
-        options: ["replaceAll()", "replace()", "split()", "slice()"],
-        answer: "replaceAll()"
-    },
-    {
-        question: "¿Qué método devuelve true si una cadena de texto contiene otra cadena de texto?",
-        options: ["includes()", "indexOf()", "charAt()", "substring()"],
-        answer: "includes()"
-    },
-    {
-        question: "¿Qué método devuelve un valor booleano indicando si una cadena de texto termina con los caracteres de una cadena especificada?",
-        options: ["endsWith()", "startsWith()", "includes()", "indexOf()"],
-        answer: "endsWith()"
-    },
-    {
-        question: "¿Qué método devuelve un valor booleano indicando si una cadena de texto comienza con los caracteres de una cadena especificada?",
-        options: ["startsWith()", "endsWith()", "includes()", "indexOf()"],
-        answer: "startsWith()"
-    },
-    {
-        question: "¿Qué método devuelve un objeto tipo array con las coincidencias encontradas en una cadena de texto?",
-        options: ["match()", "search()", "replace()", "split()"],
-        answer: "match()"
-    },
-    {
-        question: "¿Qué método devuelve el índice de la primera ocurrencia de un valor en una cadena de texto?",
-        options: ["indexOf()", "search()", "charAt()", "includes()"],
-        answer: "indexOf()"
-    },
-    {
-        question: "¿Qué tipo de dato es un contenedor para almacenar datos estructurados?",
-        options: ["Object", "String", "Boolean", "Number"],
-        answer: "Object"
-    },
-    {
-        question: "¿Qué tipo de dato se utiliza para almacenar una colección de propiedades y métodos?",
-        options: ["Object", "Array", "String", "Number"],
-        answer: "Object"
-    },
-    {
-        question: "¿Qué tipo de dato representa una variable que no tiene un valor asignado?",
-        options: ["undefined", "null", "NaN", "false"],
-        answer: "undefined"
-    },
-    {
-        question: "¿Qué valor especial se utiliza para representar una cantidad no numérica?",
-        options: ["NaN", "null", "undefined", "false"],
-        answer: "NaN"
-    },
-    {
-        question: "¿Qué operador lógico se usa para comparar dos valores y devolver true si son iguales en valor y tipo?",
-        options: ["===", "==", "=", "!="],
-        answer: "==="
-    },
-    {
-        question: "¿Qué operador lógico se usa para comparar dos valores y devolver true si no son iguales en valor y tipo?",
-        options: ["!==", "!=", "==", "="],
-        answer: "!=="
-    },
-    {
-        question: "¿Qué operador lógico devuelve true si ambos operandos son true?",
-        options: ["&&", "||", "!", "=="],
-        answer: "&&"
-    },
-    {
-        question: "¿Qué operador lógico devuelve true si al menos uno de los operandos es true?",
-        options: ["||", "&&", "!", "=="],
-        answer: "||"
-    },
-    {
-        question: "¿Qué operador lógico devuelve true si ambos operandos son false?",
-        options: ["!&&", "||", "XNOR", "&&"],
-        answer: "XNOR"
-    },
-    {
-        question: "¿Qué operador lógico devuelve false si ambos operandos son true?",
-        options: ["XOR", "||", "&&", "!="],
-        answer: "XOR"
-    },
-    {
-        question: "¿Qué operador lógico se usa para la asignación de valores?",
-        options: ["=", "==", "===", "!="],
-        answer: "="
-    },
-    {
-        question: "¿Qué operador lógico invierte el valor de un booleano?",
-        options: ["!", "&&", "||", "=="],
-        answer: "!"
-    },
-    {
-        question: "¿Qué operador lógico se usa para comparar dos expresiones?",
-        options: ["==", "=", "!=", "==="],
-        answer: "=="
-    },
-    {
-        question: "¿Qué operador lógico devuelve true si los operandos no son iguales en valor?",
-        options: ["!=", "==", "===", "="],
-        answer: "!="
-    },
-    {
-        question: "¿Cuál es el resultado de usar el operador + con un número y una cadena?",
-        options: ["Una cadena que representa la concatenación del número y la cadena", "Error", "Un número que representa la suma", "NaN"],
-        answer: "Una cadena que representa la concatenación del número y la cadena"
-    },
-    {
-        question: "¿Qué operador lógico se utiliza para comprobar si dos expresiones son diferentes en valor o tipo?",
-        options: ["!==", "==", "!=", "==="],
-        answer: "!=="
-    },
-    {
-        question: "¿Qué operador lógico se utiliza para verificar si dos expresiones son iguales en valor, pero no necesariamente en tipo?",
-        options: ["==", "===", "!=", "!=="],
-        answer: "=="
-    },
-    {
-        question: "¿Qué operador lógico se utiliza para verificar si dos expresiones son estrictamente iguales en valor y tipo?",
-        options: ["===", "==", "!=", "!=="],
-        answer: "==="
-    },
-    {
-        question: "¿Qué operador lógico se utiliza para verificar si dos expresiones son estrictamente diferentes en valor y tipo?",
-        options: ["!==", "!=", "==", "==="],
-        answer: "!=="
-    }
+    // --- ACCIONES DE CELDAS Y FORMATO (1-20) ---
+    { question: "En Excel, ¿qué significa 'Bold'?", options: ["Cursiva", "Negrita", "Subrayado", "Tachado"], answer: "Negrita" },
+    { question: "¿Qué acción realizas si la instrucción dice 'Merge and Center'?", options: ["Dividir celdas", "Combinar y centrar", "Cambiar color", "Ajustar texto"], answer: "Combinar y centrar" },
+    { question: "Si te piden 'Fill Series', ¿qué herramienta debes usar?", options: ["Relleno de serie", "Filtros", "Gráficos", "Tablas"], answer: "Relleno de serie" },
+    { question: "¿Qué es el 'Font Color'?", options: ["Color de fondo", "Color de la fuente/texto", "Grosor de línea", "Tamaño de letra"], answer: "Color de la fuente/texto" },
+    { question: "¿Qué significa 'Wrap Text'?", options: ["Ajustar texto al ancho de la celda", "Girar el texto", "Borrar texto", "Copiar texto"], answer: "Ajustar texto al ancho de la celda" },
+    { question: "Si la regla es 'Conditional Formatting', el formato cambia según:", options: ["El azar", "Una condición o criterio", "La impresora", "El nombre del archivo"], answer: "Una condición o criterio" },
+    { question: "¿Qué significa 'Cell Range'?", options: ["Una sola celda", "Un rango o grupo de celdas", "Una hoja entera", "Un libro de trabajo"], answer: "Un rango o grupo de celdas" },
+    { question: "¿Qué es 'Alignment'?", options: ["Alineación", "Suma", "Resta", "Borde"], answer: "Alineación" },
+    { question: "Si te piden un 'Solid Border', ¿cómo debe ser el borde?", options: ["Punteado", "Sólido/Continuo", "Doble", "Sin borde"], answer: "Sólido/Continuo" },
+    { question: "¿Qué significa 'Shading' o 'Fill Color'?", options: ["Color de relleno de la celda", "Color de la letra", "Sombra del gráfico", "Transparencia"], answer: "Color de relleno de la celda" },
+    { question: "¿Qué es 'Indent'?", options: ["Sangría", "Espacio entre hojas", "Salto de página", "Fórmula"], answer: "Sangría" },
+    { question: "¿Qué significa 'Apply a Style'?", options: ["Aplicar un estilo predefinido", "Crear una macro", "Borrar datos", "Imprimir"], answer: "Aplicar un estilo predefinido" },
+    { question: "Si lees 'Standard Colors', ¿dónde están?", options: ["En la parte superior", "En la parte inferior de la paleta", "En un menú oculto", "No existen"], answer: "En la parte inferior de la paleta" },
+    { question: "¿Qué es 'Accent 1' en Excel?", options: ["Un tipo de letra", "Un color específico del tema", "Una función matemática", "Un error"], answer: "Un color específico del tema" },
+    { question: "¿Qué significa 'Decimal Places'?", options: ["Lugares decimales", "Puntos de separación", "Números enteros", "Porcentajes"], answer: "Lugares decimales" },
+    { question: "Si te piden 'Format as Table', ¿qué sucede?", options: ["Los datos se convierten en objeto Tabla", "Se borran los datos", "Se crea un gráfico", "Se protege la hoja"], answer: "Los datos se convierten en objeto Tabla" },
+    { question: "¿Qué es 'Cell Styles'?", options: ["Estilos de celda", "Tipos de fuente", "Formatos de número", "Configuración de página"], answer: "Estilos de celda" },
+    { question: "¿Qué significa 'Format Painter'?", options: ["Copiar formato", "Pintar celdas", "Insertar imagen", "Dibujar"], answer: "Copiar formato" },
+    { question: "Si lees 'Clear Formatting', ¿qué borras?", options: ["Los datos", "Solo el formato (colores, bordes...)", "La hoja", "Las fórmulas"], answer: "Solo el formato (colores, bordes...)" },
+    { question: "¿Qué es 'Accounting Format'?", options: ["Formato de contabilidad", "Formato de texto", "Formato de fecha", "Formato de hora"], answer: "Formato de contabilidad" },
 
+    // --- TABLAS Y DATOS (21-40) ---
+    { question: "¿Qué significa 'Sort A to Z'?", options: ["Ordenar de A a Z", "Filtrar por A", "Borrar de A a Z", "Ocultar filas"], answer: "Ordenar de A a Z" },
+    { question: "¿Qué es 'Filter'?", options: ["Filtro para mostrar datos específicos", "Sumar datos", "Un tipo de gráfico", "Una protección"], answer: "Filtro para mostrar datos específicos" },
+    { question: "Si te piden 'Remove Duplicates', ¿qué haces?", options: ["Copiar datos", "Quitar duplicados", "Multiplicar filas", "Resaltar datos"], answer: "Quitar duplicados" },
+    { question: "¿Qué significa 'Total Row' en una tabla?", options: ["Fila de totales", "Fila superior", "Nombre de la tabla", "Primera columna"], answer: "Fila de totales" },
+    { question: "¿Qué es 'Subtotal'?", options: ["Un cálculo parcial de un grupo", "El total final", "Un error de división", "Una resta"], answer: "Un cálculo parcial de un grupo" },
+    { question: "¿Qué significa 'Convert to Range'?", options: ["Convertir tabla en rango normal", "Crear una tabla", "Borrar un rango", "Cambiar de hoja"], answer: "Convertir tabla en rango normal" },
+    { question: "Si lees 'Header Row', ¿a qué se refiere?", options: ["Fila de encabezado", "Fila final", "Fila vacía", "Fila de suma"], answer: "Fila de encabezado" },
+    { question: "¿Qué es 'Data Validation'?", options: ["Validación de datos (restricciones)", "Suma de datos", "Copia de datos", "Envío de datos"], answer: "Validación de datos (restricciones)" },
+    { question: "¿Qué significa 'Dropdown List'?", options: ["Lista desplegable", "Lista de errores", "Gráfico de líneas", "Nombre de archivo"], answer: "Lista desplegable" },
+    { question: "Si te piden 'Group Rows', ¿qué haces?", options: ["Agrupar filas", "Eliminar filas", "Pintar filas", "Ocultar columnas"], answer: "Agrupar filas" },
+    { question: "¿Qué significa 'Ungroup'?", options: ["Desagrupar", "Borrar", "Unir", "Dividir"], answer: "Desagrupar" },
+    { question: "¿Qué es un 'Named Range'?", options: ["Rango con nombre", "Nombre del libro", "Nombre de usuario", "Celda sin nombre"], answer: "Rango con nombre" },
+    { question: "¿Qué significa 'Import Data'?", options: ["Importar datos externos", "Exportar a PDF", "Guardar", "Borrar"], answer: "Importar datos externos" },
+    { question: "¿Qué es 'Text to Columns'?", options: ["Texto en columnas", "Columnas en texto", "Unir celdas", "Cambiar fuente"], answer: "Texto en columnas" },
+    { question: "¿Qué significa 'Flash Fill'?", options: ["Relleno rápido", "Borrado rápido", "Copia rápida", "Cierre rápido"], answer: "Relleno rápido" },
+    { question: "Si lees 'Freeze Panes', ¿qué haces?", options: ["Inmovilizar paneles", "Congelar el programa", "Borrar la pantalla", "Bloquear el libro"], answer: "Inmovilizar paneles" },
+    { question: "¿Qué es 'Split' en la pestaña Vista?", options: ["Dividir la ventana", "Unir ventanas", "Cerrar ventana", "Nueva ventana"], answer: "Dividir la ventana" },
+    { question: "¿Qué significa 'Hide/Unhide'?", options: ["Ocultar/Mostrar", "Borrar/Pegar", "Subir/Bajar", "Entrar/Salir"], answer: "Ocultar/Mostrar" },
+    { question: "Si te piden 'Consolidate', ¿qué haces?", options: ["Consolidar datos de varios rangos", "Borrar datos", "Crear un gráfico", "Proteger"], answer: "Consolidar datos de varios rangos" },
+    { question: "¿Qué significa 'Advanced Filter'?", options: ["Filtro avanzado", "Filtro simple", "Sin filtro", "Borrar filtro"], answer: "Filtro avanzado" },
+
+    // --- FÓRMULAS Y FUNCIONES (41-60) ---
+    { question: "¿Qué es 'SUM'?", options: ["Suma", "Resta", "Multiplicación", "División"], answer: "Suma" },
+    { question: "¿Qué es 'AVERAGE'?", options: ["Promedio", "Máximo", "Mínimo", "Contar"], answer: "Promedio" },
+    { question: "¿Qué hace la función 'COUNT'?", options: ["Cuenta celdas con números", "Suma números", "Busca texto", "Borra celdas"], answer: "Cuenta celdas con números" },
+    { question: "¿Qué devuelve 'MAX'?", options: ["El valor máximo", "El valor mínimo", "El total", "El promedio"], answer: "El valor máximo" },
+    { question: "¿Qué devuelve 'MIN'?", options: ["El valor mínimo", "El valor máximo", "Cero", "Error"], answer: "El valor mínimo" },
+    { question: "¿Qué significa 'IF function'?", options: ["Función lógica SI", "Función de búsqueda", "Función de fecha", "Función de texto"], answer: "Función lógica SI" },
+    { question: "¿Qué es 'VLOOKUP'?", options: ["Búsqueda vertical", "Búsqueda horizontal", "Suma rápida", "Validación"], answer: "Búsqueda vertical" },
+    { question: "¿Qué es 'HLOOKUP'?", options: ["Búsqueda horizontal", "Búsqueda vertical", "Filtro", "Gráfico"], answer: "Búsqueda horizontal" },
+    { question: "¿Qué significa 'Absolute Reference' ($A$1)?", options: ["Referencia absoluta (fija)", "Referencia relativa", "Error de fórmula", "Texto"], answer: "Referencia absoluta (fija)" },
+    { question: "¿Qué es 'CONCATENATE' o 'CONCAT'?", options: ["Unir textos", "Dividir textos", "Borrar espacios", "Sumar"], answer: "Unir textos" },
+    { question: "¿Qué hace 'UPPER'?", options: ["Convierte a mayúsculas", "Convierte a minúsculas", "Cuenta letras", "Borra"], answer: "Convierte a mayúsculas" },
+    { question: "¿Qué hace 'LOWER'?", options: ["Convierte a minúsculas", "Convierte a mayúsculas", "Suma", "Resta"], answer: "Convierte a minúsculas" },
+    { question: "¿Qué es 'PROPER'?", options: ["Nombre Propio (Mayúscula inicial)", "Todo mayúsculas", "Todo minúsculas", "Error"], answer: "Nombre Propio (Mayúscula inicial)" },
+    { question: "¿Qué significa 'PMT function'?", options: ["Función de pago (financiera)", "Función de fecha", "Función de texto", "Función lógica"], answer: "Función de pago (financiera)" },
+    { question: "¿Qué hace 'ROUND'?", options: ["Redondear", "Sumar", "Multiplicar", "Dividir"], answer: "Redondear" },
+    { question: "¿Qué es 'IFERROR'?", options: ["Si error (manejo de errores)", "Suma errores", "Borra errores", "Es un error"], answer: "Si error (manejo de errores)" },
+    { question: "¿Qué significa 'Nested Function'?", options: ["Función anidada", "Función simple", "Función rota", "Sin función"], answer: "Función anidada" },
+    { question: "¿Qué hace 'COUNTIF'?", options: ["Contar si cumple una condición", "Contar todo", "Sumar si", "Promedio"], answer: "Contar si cumple una condición" },
+    { question: "¿Qué hace 'SUMIF'?", options: ["Sumar si cumple una condición", "Suma total", "Contar", "Resta"], answer: "Sumar si cumple una condición" },
+    { question: "¿Qué significa 'Lookup Value'?", options: ["Valor buscado", "Matriz de búsqueda", "Resultado", "Error"], answer: "Valor buscado" },
+
+    // --- GRÁFICOS (61-80) ---
+    { question: "¿Qué es un 'Chart'?", options: ["Gráfico", "Tabla", "Fórmula", "Celda"], answer: "Gráfico" },
+    { question: "¿Qué significa 'Clustered Column'?", options: ["Columnas agrupadas", "Columnas apiladas", "Líneas", "Circular"], answer: "Columnas agrupadas" },
+    { question: "¿Qué es un 'Pie Chart'?", options: ["Gráfico circular/pastel", "Gráfico de barras", "Gráfico de área", "Gráfico de puntos"], answer: "Gráfico circular/pastel" },
+    { question: "¿Qué significa 'Legend' en un gráfico?", options: ["Leyenda", "Título", "Eje X", "Eje Y"], answer: "Leyenda" },
+    { question: "¿Qué son los 'Axis'?", options: ["Ejes", "Colores", "Puntos", "Títulos"], answer: "Ejes" },
+    { question: "¿Qué significa 'Secondary Axis'?", options: ["Eje secundario", "Eje principal", "Sin eje", "Título"], answer: "Eje secundario" },
+    { question: "¿Qué es un 'Histogram'?", options: ["Histograma (frecuencias)", "Líneas", "Pastel", "Dispersión"], answer: "Histograma (frecuencias)" },
+    { question: "¿Qué significa 'Chart Title'?", options: ["Título del gráfico", "Nombre de la hoja", "Leyenda", "Eje"], answer: "Título del gráfico" },
+    { question: "¿Qué son 'Gridlines'?", options: ["Líneas de división", "Bordes de celda", "Fórmulas", "Puntos"], answer: "Líneas de división" },
+    { question: "¿Qué significa 'Plot Area'?", options: ["Área de trazado", "Área del gráfico", "Leyenda", "Título"], answer: "Área de trazado" },
+    { question: "¿Qué es 'Data Series'?", options: ["Serie de datos", "Nombre del gráfico", "Eje X", "Eje Y"], answer: "Serie de datos" },
+    { question: "Si te piden 'Switch Row/Column', ¿qué haces?", options: ["Cambiar filas por columnas", "Borrar todo", "Cambiar de hoja", "Mover gráfico"], answer: "Cambiar filas por columnas" },
+    { question: "¿Qué es un 'Sparkline'?", options: ["Minigráfico", "Gráfico grande", "Línea de tendencia", "Error"], answer: "Minigráfico" },
+    { question: "¿Qué significa 'Trendline'?", options: ["Línea de tendencia", "Línea de base", "Borde", "Eje"], answer: "Línea de tendencia" },
+    { question: "¿Qué es un 'Scatter Chart'?", options: ["Gráfico de dispersión", "Gráfico de barras", "Gráfico de área", "Gráfico de mapa"], answer: "Gráfico de dispersión" },
+    { question: "¿Qué significa 'Waterfall Chart'?", options: ["Gráfico de cascada", "Gráfico de embudo", "Gráfico circular", "Gráfico solar"], answer: "Gráfico de cascada" },
+    { question: "¿Qué es 'Chart Style'?", options: ["Estilo de gráfico", "Tipo de gráfico", "Color de celda", "Fuente"], answer: "Estilo de gráfico" },
+    { question: "¿Qué significa 'Move Chart'?", options: ["Mover gráfico (a otra hoja)", "Borrar gráfico", "Copiar gráfico", "Cambiar tamaño"], answer: "Mover gráfico" },
+    { question: "¿Qué es 'Sunburst'?", options: ["Gráfico de proyección solar", "Gráfico de barras", "Gráfico de líneas", "Circular"], answer: "Gráfico de proyección solar" },
+    { question: "¿Qué significa 'Stacked Column'?", options: ["Columna apilada", "Columna agrupada", "Barra", "Área"], answer: "Columna apilada" },
+
+    // --- TABLAS DINÁMICAS Y AVANZADO (81-100) ---
+    { question: "¿Qué es una 'PivotTable'?", options: ["Tabla dinámica", "Tabla estática", "Gráfico dinámico", "Filtro"], answer: "Tabla dinámica" },
+    { question: "¿Qué significa 'Refresh' en una PivotTable?", options: ["Actualizar datos", "Borrar tabla", "Crear tabla", "Cerrar"], answer: "Actualizar datos" },
+    { question: "¿Qué es un 'Slicer'?", options: ["Segmentador de datos", "Gráfico", "Fórmula", "Campo"], answer: "Segmentador de datos" },
+    { question: "¿Qué significa 'Values Field'?", options: ["Campo de valores", "Campo de fila", "Campo de filtro", "Título"], answer: "Campo de valores" },
+    { question: "¿Qué es un 'Calculated Field'?", options: ["Campo calculado", "Suma simple", "Filtro", "Gráfico"], answer: "Campo calculado" },
+    { question: "¿Qué significa 'Grand Total'?", options: ["Total general", "Subtotal", "Promedio", "Error"], answer: "Total general" },
+    { question: "¿Qué es 'Goal Seek'?", options: ["Buscar objetivo", "Buscar texto", "Buscar reemplazo", "Buscar hoja"], answer: "Buscar objetivo" },
+    { question: "¿Qué significa 'Scenario Manager'?", options: ["Administrador de escenarios", "Administrador de nombres", "Administrador de archivos", "Macros"], answer: "Administrador de escenarios" },
+    { question: "¿Qué es una 'Macro'?", options: ["Automatización de tareas", "Un gráfico grande", "Un error grave", "Una tabla"], answer: "Automatización de tareas" },
+    { question: "¿Qué significa 'Protect Sheet'?", options: ["Proteger hoja", "Proteger libro", "Borrar hoja", "Ocultar hoja"], answer: "Proteger hoja" },
+    { question: "¿Qué es 'AutoRecover'?", options: ["Autorrecuperación", "Autoguardado", "Autocierre", "Autoformato"], answer: "Autorrecuperación" },
+    { question: "¿Qué significa 'Inspect Document'?", options: ["Inspeccionar documento", "Imprimir documento", "Guardar documento", "Cerrar"], answer: "Inspeccionar documento" },
+    { question: "¿Qué es 'Page Layout'?", options: ["Diseño de página", "Vista previa", "Salto de página", "Margen"], answer: "Diseño de página" },
+    { question: "¿Qué significa 'Margins'?", options: ["Márgenes", "Bordes", "Espacios", "Títulos"], answer: "Márgenes" },
+    { question: "¿Qué es 'Orientation' (Portrait/Landscape)?", options: ["Orientación (Vertical/Horizontal)", "Tamaño", "Color", "Fuente"], answer: "Orientación (Vertical/Horizontal)" },
+    { question: "¿Qué significa 'Print Area'?", options: ["Área de impresión", "Área de trazado", "Área de datos", "Área vacía"], answer: "Área de impresión" },
+    { question: "¿Qué es 'VBA'?", options: ["Lenguaje para macros", "Tipo de gráfico", "Función lógica", "Error"], answer: "Lenguaje para macros" },
+    { question: "¿Qué significa 'Workbook'?", options: ["Libro de trabajo", "Hoja de trabajo", "Celda", "Rango"], answer: "Libro de trabajo" },
+    { question: "¿Qué significa 'Worksheet'?", options: ["Hoja de trabajo", "Libro", "Fila", "Columna"], answer: "Hoja de trabajo" },
+    { question: "¿Qué significa 'Hyperlink'?", options: ["Hipervínculo/Enlace", "Fórmula", "Gráfico", "Imagen"], answer: "Hipervínculo/Enlace" }
 ];
-
 
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
 let skippedQuestions = [];
-let availableQuestions = [...questions];
+let availableQuestions = [];
+
+// Escala de premios (puedes ajustar los montos)
+const moneyLevels = Array.from({ length: 100 }, (_, i) => (i + 1) * 10000);
 
 const questionElement = document.getElementById('question');
 const optionsElements = document.querySelectorAll('.option');
 const scoreElement = document.getElementById('score');
+// Asegúrate de tener un elemento con id 'money' y 'progress' en tu HTML
+const moneyElement = document.getElementById('money');
+const progressElement = document.getElementById('progress');
+
+function startGame() {
+    correctAnswers = 0;
+    updateUI();
+    availableQuestions = shuffleArray([...questions]);
+    currentQuestionIndex = 0;
+    loadQuestion(currentQuestionIndex);
+}
+
+function updateUI() {
+    const currentMoney = correctAnswers > 0 ? moneyLevels[correctAnswers - 1] : 0;
+
+    // Actualiza el dinero acumulado
+    if (moneyElement) {
+        moneyElement.textContent = `Acumulado: $${currentMoney.toLocaleString()}`;
+    }
+
+    // Actualiza el contador tipo (X de 100)
+    if (progressElement) {
+        progressElement.textContent = `Pregunta: ${correctAnswers + 1} de ${questions.length}`;
+    }
+
+    scoreElement.textContent = `Aciertos: ${correctAnswers}`;
+}
 
 function loadQuestion(index) {
-    if (availableQuestions.length === 0) {
-        questionElement.textContent = "No hay más preguntas disponibles.";
-        optionsElements.forEach(button => button.style.display = 'none');
+    if (correctAnswers === questions.length) {
+        showVictory();
         return;
     }
 
     const question = availableQuestions[index];
     questionElement.textContent = question.question;
+
     const shuffledOptions = shuffleArray([...question.options]);
+
     optionsElements.forEach((button, i) => {
         button.textContent = `${String.fromCharCode(65 + i)}) ${shuffledOptions[i]}`;
         button.classList.remove('correct', 'incorrect', 'disabled');
+        button.style.pointerEvents = 'auto';
         button.style.display = 'inline-block';
         button.onclick = () => checkAnswer(button, question.answer);
     });
 }
+
+function checkAnswer(button, correctAnswer) {
+    const selectedAnswer = button.textContent.slice(3);
+    optionsElements.forEach(btn => btn.style.pointerEvents = 'none');
+
+    if (selectedAnswer === correctAnswer) {
+        button.classList.add('correct');
+        correctAnswers++;
+
+        setTimeout(() => {
+            if (correctAnswers < questions.length) {
+                availableQuestions.splice(currentQuestionIndex, 1);
+                // Siempre barajamos lo que queda para que la siguiente sea random
+                currentQuestionIndex = Math.floor(Math.random() * availableQuestions.length);
+                updateUI();
+                loadQuestion(currentQuestionIndex);
+            } else {
+                showVictory();
+            }
+        }, 1200);
+
+    } else {
+        button.classList.add('incorrect');
+        optionsElements.forEach(btn => {
+            if (btn.textContent.slice(3) === correctAnswer) {
+                btn.classList.add('correct');
+            }
+        });
+
+        setTimeout(() => {
+            alert(`¡PERDISTE! Te vas a casa con $0. \nReintentémoslo desde la pregunta 1.`);
+            startGame();
+        }, 2000);
+    }
+}
+
+function showVictory() {
+    questionElement.textContent = "¡INCREÍBLE! ¡ERES MILLONARIO EN EXCEL!";
+    if (progressElement) progressElement.textContent = "100 de 100 completadas";
+    if (moneyElement) moneyElement.textContent = `PREMIO FINAL: $${moneyLevels[99].toLocaleString()}`;
+    optionsElements.forEach(button => button.style.display = 'none');
+
+    // Efecto visual extra opcional
+    alert("¡FELICIDADES! Has contestado correctamente las 100 preguntas de vocabulario.");
+}
+
+// ... (Las funciones shuffleArray y los botones de ayuda se mantienen igual)
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -588,58 +224,4 @@ function shuffleArray(array) {
     return array;
 }
 
-function checkAnswer(button, correctAnswer) {
-    const selectedAnswer = button.textContent.slice(3); // Remove "A) ", "B) ", etc.
-    if (selectedAnswer === correctAnswer) {
-        button.classList.add('correct');
-        correctAnswers++;
-    } else {
-        button.classList.add('incorrect');
-        optionsElements.forEach(btn => {
-            if (btn.textContent.slice(3) === correctAnswer) {
-                btn.classList.add('correct');
-            }
-        });
-        correctAnswers = 0; // Reset the counter on wrong answer
-    }
-    scoreElement.textContent = `Preguntas acertadas: ${correctAnswers}`;
-}
-
-document.getElementById('random-question').onclick = () => {
-    currentQuestionIndex = Math.floor(Math.random() * availableQuestions.length);
-    loadQuestion(currentQuestionIndex);
-};
-
-document.getElementById('reset-counter').onclick = () => {
-    correctAnswers = 0;
-    scoreElement.textContent = `Preguntas acertadas: 0`;
-};
-
-document.getElementById('skip-question').onclick = () => {
-    skippedQuestions.push(availableQuestions[currentQuestionIndex]);
-    availableQuestions.splice(currentQuestionIndex, 1);
-    currentQuestionIndex = (currentQuestionIndex + 1) % availableQuestions.length;
-    loadQuestion(currentQuestionIndex);
-};
-
-document.getElementById('fifty-fifty').onclick = () => {
-    const correctAnswer = availableQuestions[currentQuestionIndex].answer;
-    let incorrectOptions = Array.from(optionsElements).filter(btn => btn.textContent.slice(3) !== correctAnswer);
-    incorrectOptions = shuffleArray(incorrectOptions).slice(0, 2);
-    incorrectOptions.forEach(btn => btn.classList.add('disabled'));
-};
-
-document.getElementById('remove-question').onclick = () => {
-    availableQuestions.splice(currentQuestionIndex, 1);
-    currentQuestionIndex = Math.floor(Math.random() * availableQuestions.length);
-    loadQuestion(currentQuestionIndex);
-};
-
-document.getElementById('reintegrate-skipped').onclick = () => {
-    availableQuestions = availableQuestions.concat(skippedQuestions);
-    skippedQuestions = [];
-    currentQuestionIndex = Math.floor(Math.random() * availableQuestions.length);
-    loadQuestion(currentQuestionIndex);
-};
-
-loadQuestion(currentQuestionIndex);
+startGame();

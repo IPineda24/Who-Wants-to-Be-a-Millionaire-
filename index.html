@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Quién quiere ser millonario?</title>
+    <title>¿Quién quiere ser millonario? - Excel Edition</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1><img width="30%" src="./logo.png" alt=""></h1>
+        <h1><img width="30%" src="./logo.png" alt="Millonario Logo"></h1>
+        
+        <div id="status-panel" class="status-panel">
+            <div id="money">Acumulado: $0</div>
+            <div id="progress">Pregunta: 1 de 100</div>
+        </div>
+
         <div class="question-section">
-            <p id="question"></p>
+            <p id="question">Cargando pregunta...</p>
             <div class="options">
                 <div class="option-row">
                     <button class="option" id="option1"></button>
@@ -22,6 +28,7 @@
                 </div>
             </div>
         </div>
+
         <div class="controls">
             <button id="random-question">Mezclar</button>
             <button id="reset-counter">Reiniciar</button>
@@ -30,6 +37,7 @@
             <button id="remove-question">Eliminar</button>
             <button id="reintegrate-skipped">Reintegrar</button>
         </div>
+        
         <div id="score">Preguntas acertadas: 0</div>
     </div>
     <script src="script.js"></script>
